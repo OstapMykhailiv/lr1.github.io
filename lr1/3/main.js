@@ -1,13 +1,22 @@
 var number = prompt("Введіть цифру місяця: ");
 
-if (number >= 1 && number <= 2 || number === 12) {
-  alert("Зима");
-} else if (number >= 3 && number <= 5) {
-  alert("Весна");
-} else if (number >= 6 && number <= 8) {
-  alert("Літо");
-} else if (number >= 9 && number <= 11) {
-  alert("Осінь");
-} else {
-  alert("Неравильне число місяця. Введіть число від 1 до 12.");
+switch (parseInt(number)) {
+  case 1: case 2: case 12:
+    alert("Зима");
+    break;
+
+  case 3: case 4: case 5:
+    alert("Весна");
+    break;
+
+  case 6: case 7: case 8:
+    alert("Літо");
+    break;
+
+  case 9: case 10: case 11:
+    alert("Осінь");
+    break;
+
+  default:
+    alert("Неправильне число місяця або символи. Введіть число від 1 до 12.");
 }
